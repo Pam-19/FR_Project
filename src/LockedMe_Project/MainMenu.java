@@ -1,6 +1,5 @@
 package LockedMe_Project;
 
-import java.util.Scanner;
 
 public class MainMenu {
 	
@@ -17,8 +16,8 @@ public class MainMenu {
 	                    displayFiles();
 	                    break;
 	                case 2:
-	                    ManageFiles k = new ManageFiles();
-	                    k.displayUI();
+	                    Operations k = new Operations();
+	                    k.Operations_UI();
 	                    
 	                    break;
 	                case 3:
@@ -32,10 +31,7 @@ public class MainMenu {
 	        }
 	    }
 
-	private void manageFiles() {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 	private void displayFiles() {
 		// TODO Auto-generated method stub
@@ -44,19 +40,19 @@ public class MainMenu {
 
 	private void mainMenu() {
 		// TODO Auto-generated method stub
-		System.out.println();
-		
+		System.out.println("Welcome to the Main Menu : \n");
+		System.out.println("1. Display existing files");
+		System.out.println("2. Operate on files");
+		System.out.println("3. Close the app");
 	}
 
 
-	private int getUserInput() {
+	public int getUserInput() {
 		// TODO Auto-generated method stub
 		int ch = 0 ;
-		Scanner sc = new Scanner(System.in);
-				
-		System.out.println("Enter your choice as an integer!! ");
-		ch = sc.nextInt();
-		
+		InputScanner.initialize();
+		ch = InputScanner.nextInt(); 
+        //InputScanner.close();
 		return ch;
 	}
 

@@ -1,10 +1,11 @@
 package LockedMe_Project;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
+//import java.io.File;
+//import java.util.ArrayList;
+//import java.util.Collections;
+//import java.util.List;
+//import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
+
 public class WelcomeScreen {
 
 	public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class WelcomeScreen {
 		
 		        displayWelcomeScreen();
 		        try {
-					TimeUnit.SECONDS.sleep(3);
+					TimeUnit.SECONDS.sleep(1);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					
