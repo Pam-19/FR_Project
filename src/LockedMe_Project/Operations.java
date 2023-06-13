@@ -1,4 +1,6 @@
 package LockedMe_Project;
+import java.io.File;
+import java.io.IOException;
 
 public class Operations {
 	
@@ -61,7 +63,21 @@ public class Operations {
 
 	private void addFile() {
 		// TODO Auto-generated method stub
-		System.out.println("Hello");
+		String name;
+		System.out.println("\nEnter Name of file\n");
+		InputScanner.initialize();
+		name = InputScanner.nextLine();
+		 File add = new File(name);
+	        try {
+	            if (add.createNewFile()) {
+	                System.out.println("New file added" );
+	            } else {
+	                System.out.println("File exists with same name");
+	            }
+	        } catch (IOException e) {
+	            System.out.println("An error occurred while creating the file: " + e.getMessage());
+	        }
+		
 	}
 
 	private void UI_Menu() {

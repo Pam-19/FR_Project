@@ -16,7 +16,9 @@ public class InputScanner {
     public static int nextInt() {
         return scanner.nextInt();
     }
-
+    public static String nextLine() {
+        return scanner.nextLine();
+    }
     public static void close() {
         scanner.close();
     }

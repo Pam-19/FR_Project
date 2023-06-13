@@ -11,7 +11,7 @@ public class WelcomeScreen {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		 //   private static final String ROOT_DIRECTORY = "/path/to/root/directory"; // Replace with the actual root directory path
+		
 
 		
 		        displayWelcomeScreen();

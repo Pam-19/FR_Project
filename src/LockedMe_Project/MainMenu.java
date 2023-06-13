@@ -1,5 +1,9 @@
 package LockedMe_Project;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class MainMenu {
 	
@@ -37,8 +41,26 @@ public class MainMenu {
 
 	private void displayFiles() {
 		// TODO Auto-generated method stub
-		
-	}
+		String Path = System.getProperty("user.dir");
+        List<String> Names = new ArrayList<String>();
+        File folder = new File(Path);
+        File[] FileList = folder.listFiles();
+
+        if (FileList!=null) {   // to ensure that the list of file names exists and its not an empty folder
+                for (File file : FileList) {
+                    if (file.isFile()) {   //this check is to ensure that no folders are included in the list of names.
+                        Names.add(file.getName());
+                    }
+                }
+                Collections.sort(Names);
+
+                System.out.println(Names);
+            }  
+            
+            else { 
+            	System.out.println("Folder is empty");	
+            }
+        }	        
 
 	private void mainMenu() {
 		// TODO Auto-generated method stub
