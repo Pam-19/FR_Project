@@ -30,7 +30,9 @@ public class Operations {
                 case 4:
                 	StayInLoop = false;
                     System.out.println("Returning to Main Menu");
+                    break;
                 default:
+                	
                     System.out.println("Invalid option. Please try again.");
                     break;
 		
