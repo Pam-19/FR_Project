@@ -37,16 +37,11 @@ public class Operations {
 	}}
 }
 
-	
-    	
-	
-
-
-
 
 
 	public int getInput() {
 		int ch = 0 ;
+		System.out.println("\n");
 		InputScanner.initialize();
 		ch = InputScanner.nextInt(); 
         //InputScanner.close();
@@ -73,7 +68,7 @@ public class Operations {
 		System.out.println("1. Add a file");
 		System.out.println("2. Delete a file");
 		System.out.println("3. Search for a file");
-		System.out.println("4. Return to Main Menu");
+		System.out.println("4. Return to Main Menu\n");
 
 		
 	}}

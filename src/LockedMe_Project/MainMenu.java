@@ -22,7 +22,9 @@ public class MainMenu {
 	                    break;
 	                case 3:
 	                	StayInLoop = false;
-	                    System.out.println("Closing the application");
+	                    System.out.println("Closing the application...");
+	                    System.out.println("X--------------------------------------X");
+
 	                    break;
 	                default:
 	                    System.out.println("Invalid option. Please try again.");
@@ -43,13 +45,14 @@ public class MainMenu {
 		System.out.println("Welcome to the Main Menu : \n");
 		System.out.println("1. Display existing files");
 		System.out.println("2. Operate on files");
-		System.out.println("3. Close the app");
+		System.out.println("3. Close the app\n");
 	}
 
 
 	public int getUserInput() {
 		// TODO Auto-generated method stub
 		int ch = 0 ;
+		System.out.println("\n");
 		InputScanner.initialize();
 		ch = InputScanner.nextInt(); 
         //InputScanner.close();
