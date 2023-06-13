@@ -1,28 +1,29 @@
 package LockedMe_Project;
 
+import java.util.Scanner;
+
 public class MainMenu {
 	
 	public void DisplayMainMenu(){
 		
 		 boolean StayInLoop = true;
 	        while (StayInLoop) {
-	            UI_Menu();
+	            mainMenu();
 
 	            int choice = getUserInput();
 
 	            switch (choice) {
 	                case 1:
-	                    addFile();
+	                    displayFiles();
 	                    break;
 	                case 2:
-	                    deleteFile();
+	                    ManageFiles k = new ManageFiles();
+	                    k.displayUI();
+	                    
 	                    break;
 	                case 3:
-	                    searchFile();
-	                    break;
-	                case 4:
 	                	StayInLoop = false;
-	                    System.out.println("Returning to the main menu.");
+	                    System.out.println("Closing the application");
 	                    break;
 	                default:
 	                    System.out.println("Invalid option. Please try again.");
@@ -31,34 +32,38 @@ public class MainMenu {
 	        }
 	    }
 
-	private void UI_Menu() {
+	private void manageFiles() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	private void searchFile() {
+	private void displayFiles() {
 		// TODO Auto-generated method stub
 		
 	}
 
-	private void deleteFile() {
+	private void mainMenu() {
 		// TODO Auto-generated method stub
+		System.out.println();
 		
 	}
 
-	private void addFile() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	private int getUserInput() {
 		// TODO Auto-generated method stub
-		return 0;
+		int ch = 0 ;
+		Scanner sc = new Scanner(System.in);
+				
+		System.out.println("Enter your choice as an integer!! ");
+		ch = sc.nextInt();
+		
+		return ch;
 	}
 
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 
 }
 
