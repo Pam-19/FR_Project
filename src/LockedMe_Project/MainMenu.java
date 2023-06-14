@@ -52,7 +52,7 @@ public class MainMenu {
                         Names.add(file.getName());
                     }
                 }
-                Collections.sort(Names);
+               Collections.sort(Names);
 
                 System.out.println(Names);
             }  
@@ -76,7 +76,9 @@ public class MainMenu {
 		int ch = 0 ;
 		System.out.println("\n");
 		InputScanner.initialize();
-		ch = InputScanner.nextInt(); 
+
+			ch = InputScanner.nextInt(); 
+		
         //InputScanner.close();
 		return ch;
 	}

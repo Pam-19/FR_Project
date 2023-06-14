@@ -1,6 +1,9 @@
 package LockedMe_Project;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class Operations {
 	
@@ -34,7 +37,6 @@ public class Operations {
                     System.out.println("Returning to Main Menu");
                     break;
                 default:
-                	
                     System.out.println("Invalid option. Please try again.");
                     break;
 		
@@ -53,8 +55,27 @@ public class Operations {
 	}
 	private void searchFile() {
 		// TODO Auto-generated method stub
-		
-	}
+		String name;
+		System.out.println("\nEnter Name of file to search\n");
+		InputScanner.initialize();
+		name = InputScanner.nextLine();
+		String Path = System.getProperty("user.dir");
+        File folder = new File(Path);
+        File[] FileList = folder.listFiles();
+    	boolean flag= false;
+        if (FileList!=null) {
+                for (File file : FileList) {
+                    if (file.isFile() && name.equals(file.getName())){
+                      flag=true;
+                       break;
+        }}}
+        if(flag) { 
+        	System.out.println("File "+name+" found!!");
+        }else {
+        	System.out.println("File " +name+ " not found!!");
+        }
+        }
+	
 
 	private void deleteFile() {
 		// TODO Auto-generated method stub

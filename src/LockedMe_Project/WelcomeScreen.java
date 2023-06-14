@@ -9,26 +9,16 @@ import java.util.concurrent.TimeUnit;
 public class WelcomeScreen {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		
-
-		
+		// TODO Auto-generated method stub		
 		        displayWelcomeScreen();
 		        try {
 					TimeUnit.SECONDS.sleep(2);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					
+					// TODO Auto-generated catch block			
 				}
-
 		        MainMenu m = new MainMenu();
-		        m.DisplayMainMenu();
-		        	
-
-		       
+		        m.DisplayMainMenu();       
 		        }
-		    
 
 		    private static void displayWelcomeScreen() {
 		        System.out.println("Welcome to LockedMe.com");
