@@ -37,7 +37,7 @@ public class Operations {
                     System.out.println("Returning to Main Menu");
                     break;
                 default:
-                    System.out.println("Invalid option. Please try again.");
+                    System.out.println("Invalid option. Please try again.\n");
                     break;
 		
 	}}
@@ -49,7 +49,12 @@ public class Operations {
 		int ch = 0 ;
 		System.out.println("\n");
 		InputScanner.initialize();
-		ch = InputScanner.nextInt(); 
+		try {
+			ch = InputScanner.nextInt();
+			
+		} catch (Exception e) {
+			System.out.println("Enter only integers");
+		}
         //InputScanner.close();
 		return ch;
 	}

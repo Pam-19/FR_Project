@@ -31,7 +31,7 @@ public class MainMenu {
 
 	                    break;
 	                default:
-	                    System.out.println("Invalid option. Please try again.");
+	                    System.out.println("Invalid option. Please try again.\n ");
 	                    break;
 	            }
 	        }
@@ -76,9 +76,13 @@ public class MainMenu {
 		int ch = 0 ;
 		System.out.println("\n");
 		InputScanner.initialize();
-
-			ch = InputScanner.nextInt(); 
 		
+		try {
+			ch = InputScanner.nextInt();
+			
+		} catch (Exception e) {
+			System.out.println("Enter only integers");
+		}
         //InputScanner.close();
 		return ch;
 	}
