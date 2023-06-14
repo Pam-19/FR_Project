@@ -82,7 +82,7 @@ public class Operations {
 	            if (add.createNewFile()) {
 	                System.out.println("New file added" );
 	            } else {   // checks for duplicate names
-	                System.out.println("File exists with same name");
+	                System.out.println("Failed!! Another file exists with the same name");
 	            }
 	        } catch (IOException e) {
 	            System.out.println("An error occurred while creating the file: " + e.getMessage());
