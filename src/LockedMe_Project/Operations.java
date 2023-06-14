@@ -58,6 +58,16 @@ public class Operations {
 
 	private void deleteFile() {
 		// TODO Auto-generated method stub
+		String Filename;
+		System.out.println("\nEnter Name of file to be deleted\n");
+		InputScanner.initialize();
+		Filename = InputScanner.nextLine();
+		File dfile = new File(Filename);
+        if (dfile.delete()) {
+            System.out.println("File " + Filename+" successfully deleted!! ");
+        } else {
+            System.out.println("File does not exist...Please try again ");
+        }
 		
 	}
 
@@ -71,7 +81,7 @@ public class Operations {
 	        try {
 	            if (add.createNewFile()) {
 	                System.out.println("New file added" );
-	            } else {
+	            } else {   // checks for duplicate names
 	                System.out.println("File exists with same name");
 	            }
 	        } catch (IOException e) {
