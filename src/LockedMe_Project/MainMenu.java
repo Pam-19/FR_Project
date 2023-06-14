@@ -54,9 +54,8 @@ public class MainMenu {
                 }
                Collections.sort(Names);
 
-                System.out.println(Names);
+                System.out.println("\n"+Names+"\n");
             }  
-            
             else { 
             	System.out.println("Folder is empty");	
             }
