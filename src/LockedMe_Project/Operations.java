@@ -82,14 +82,24 @@ public class Operations {
 		String Filename;
 		System.out.println("\nEnter Name of file to be deleted\n");
 		InputScanner.initialize();
+		boolean flag=true;
 		Filename = InputScanner.nextLine();
-		File dfile = new File(Filename);
-        if (dfile.exists() && Filename.equals(dfile.getName()) && dfile.delete()) {
-            System.out.println("File " + Filename+" successfully deleted!! ");
-        } else {
-            System.out.println("File does not exist...Please try again ");
+		String path = System.getProperty("user.dir");
+		File folder = new File(path);  // Replace with the actual directory path
+        File[] files = folder.listFiles();
+        if (files != null) {
+            for (File file : files) {
+                if (file.isFile() && file.getName().equals(Filename)) {
+                    file.delete();
+                    flag =false;
+                    System.out.println("File successfully deleted");
+                    break;
+                }
+            }
         }
-		
+        if(flag) {
+        	System.out.println("File not found!! Please try again!!");    
+    }  
 	}
 
 	private void addFile() {

@@ -23,8 +23,8 @@ public class WelcomeScreen {
 		    private static void displayWelcomeScreen() {
 		        System.out.println("Welcome to LockedMe.com");
 		        System.out.println("This project is owned and operated by Company Lockers Pvt Limited");
+		        System.out.println("Developer: Anupam Hari ");
 
-		        System.out.println("Developer: Anupam Hari");
 		        System.out.println();
 		    }
 
